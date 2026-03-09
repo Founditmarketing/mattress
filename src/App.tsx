@@ -178,45 +178,68 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/80 to-transparent"></div>
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
-        <div className="max-w-2xl">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="max-w-2xl">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-sm font-medium mb-6">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
+                </span>
+                Gulf Shores' #1 Mattress Store
+              </div>
+              <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 leading-tight">
+                Sleep Better Tonight. <br />
+                <span className="text-amber-400">Delivered Today.</span>
+              </h1>
+              <p className="text-lg text-slate-300 mb-8 leading-relaxed max-w-lg">
+                Experience the best sleep of your life with our premium selection of Tempur-Pedic, Sealy, and Stearns & Foster. Locally owned, unbeatable prices, and same-day delivery.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <button 
+                  onClick={() => setIsModalOpen(true)}
+                  className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 rounded-full text-base font-bold transition-all shadow-lg shadow-amber-500/20 flex items-center justify-center gap-2"
+                >
+                  Check Inventory <ArrowRight className="w-5 h-5" />
+                </button>
+                <button className="bg-white/10 hover:bg-white/20 text-white backdrop-blur-sm border border-white/10 px-8 py-4 rounded-full text-base font-bold transition-all flex items-center justify-center gap-2">
+                  <MapPin className="w-5 h-5" /> Get Directions
+                </button>
+              </div>
+              
+              <div className="mt-10 flex items-center gap-6 text-sm text-slate-400">
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-amber-500" /> In Stock Now
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-amber-500" /> Best Price Guarantee
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="hidden lg:block relative"
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-sm font-medium mb-6">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
-              </span>
-              Gulf Shores' #1 Mattress Store
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 leading-tight">
-              Sleep Better Tonight. <br />
-              <span className="text-amber-400">Delivered Today.</span>
-            </h1>
-            <p className="text-lg text-slate-300 mb-8 leading-relaxed max-w-lg">
-              Experience the best sleep of your life with our premium selection of Tempur-Pedic, Sealy, and Stearns & Foster. Locally owned, unbeatable prices, and same-day delivery.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button 
-                onClick={() => setIsModalOpen(true)}
-                className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 rounded-full text-base font-bold transition-all shadow-lg shadow-amber-500/20 flex items-center justify-center gap-2"
-              >
-                Check Inventory <ArrowRight className="w-5 h-5" />
-              </button>
-              <button className="bg-white/10 hover:bg-white/20 text-white backdrop-blur-sm border border-white/10 px-8 py-4 rounded-full text-base font-bold transition-all flex items-center justify-center gap-2">
-                <MapPin className="w-5 h-5" /> Get Directions
-              </button>
-            </div>
+            <div className="absolute -inset-1 bg-gradient-to-tr from-amber-500 to-amber-300 rounded-2xl blur opacity-20"></div>
+            <img 
+              src="/hero_mattress.png" 
+              alt="Premium Mattress" 
+              className="relative rounded-2xl shadow-2xl w-full object-cover aspect-[4/3] border border-white/10"
+            />
             
-            <div className="mt-10 flex items-center gap-6 text-sm text-slate-400">
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-5 h-5 text-amber-500" /> In Stock Now
+            <div className="absolute -bottom-6 -left-6 bg-white text-slate-900 p-4 rounded-xl shadow-xl border border-slate-100 flex items-center gap-4">
+              <div className="flex gap-1">
+                {[1,2,3,4,5].map(i => <Star key={i} className="w-4 h-4 text-amber-500 fill-amber-500" />)}
               </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-5 h-5 text-amber-500" /> Best Price Guarantee
-              </div>
+              <div className="text-sm font-bold">500+ Local Reviews</div>
             </div>
           </motion.div>
         </div>
