@@ -28,11 +28,11 @@ const Header = () => {
 
       {/* Main Nav */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center py-4 min-h-[5.5rem] md:min-h-[6.5rem]">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <Link to="/">
-              <img src="/logo.jpg" alt="Mattress Depot Logo" className="h-12 w-auto object-contain" />
+              <img src="/logo.jpg" alt="Mattress Depot Logo" className="h-16 md:h-20 w-auto object-contain" />
             </Link>
           </div>
 
@@ -687,7 +687,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="col-span-1 md:col-span-1">
             <div className="flex items-center mb-6">
-              <img src="/logo.jpg" alt="Mattress Depot Logo" className="h-10 w-auto object-contain bg-white p-1 rounded-sm" />
+              <img src="/logo.jpg" alt="Mattress Depot Logo" className="h-14 md:h-16 w-auto object-contain bg-white p-1 rounded-sm" />
             </div>
             <p className="text-sm leading-relaxed mb-6">
               Gulf Shores' premier locally owned mattress store. Dedicated to better sleep since 2005.
