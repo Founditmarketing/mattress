@@ -17,11 +17,11 @@ const Header = () => {
       <div className="bg-slate-900 text-white py-2 text-xs font-medium">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
           <div className="flex items-center gap-4">
-            <span className="flex items-center gap-1.5"><Truck className="w-3.5 h-3.5 text-red-400" /> Same Day Delivery Available</span>
+            <span className="flex items-center gap-1.5"><Truck className="w-3.5 h-3.5 text-red-400" /> Same Day & Next Day Delivery</span>
             <span className="hidden sm:flex items-center gap-1.5"><Star className="w-3.5 h-3.5 text-red-400" /> Locally Owned Since 2005</span>
           </div>
           <div className="flex items-center gap-4">
-            <a href="tel:251-968-6888" className="hover:text-red-400 transition-colors">Gulf Shores: (251) 968-6888</a>
+            <a href="tel:251-952-0036" className="hover:text-red-400 transition-colors">Gulf Shores: (251) 952-0036</a>
           </div>
         </div>
       </div>
@@ -82,7 +82,7 @@ const Header = () => {
 const StickyCallButton = () => {
   return (
     <div className="fixed bottom-0 left-0 right-0 p-4 bg-white border-t border-slate-200 md:hidden z-50 flex gap-3 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]">
-      <a href="tel:251-968-6888" className="flex-1 bg-slate-900 text-white py-3 rounded-lg font-bold flex items-center justify-center gap-2 shadow-lg">
+      <a href="tel:251-952-0036" className="flex-1 bg-slate-900 text-white py-3 rounded-lg font-bold flex items-center justify-center gap-2 shadow-lg">
         <Phone className="w-5 h-5" /> Call Now
       </a>
       <a href="#contact" className="flex-1 bg-red-500 text-white py-3 rounded-lg font-bold flex items-center justify-center gap-2 shadow-lg">
@@ -192,8 +192,8 @@ const Hero = () => {
                 Gulf Shores' #1 Mattress Store
               </div>
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 leading-tight">
-                Sleep Better Tonight. <br />
-                <span className="text-red-400">Delivered Today.</span>
+                Delivered Today. <br />
+                <span className="text-red-400">Sleep Better Tonight.</span>
               </h1>
               <p className="text-lg text-slate-300 mb-8 leading-relaxed max-w-lg">
                 Experience the best sleep of your life with our premium selection of Tempur-Pedic, Sealy, and Stearns & Foster. Locally owned, unbeatable prices, and same-day delivery.
@@ -232,8 +232,8 @@ const Hero = () => {
           >
             <div className="absolute -inset-1 bg-gradient-to-tr from-red-500 to-red-300 rounded-2xl blur opacity-20"></div>
             <img 
-              src="/hero_mattress.png" 
-              alt="Premium Mattress" 
+              src="/Mattress Depot.jpg" 
+              alt="Mattress Depot Showroom" 
               className="relative rounded-2xl shadow-2xl w-full object-cover aspect-[4/3] border border-white/10"
             />
             
@@ -241,7 +241,7 @@ const Hero = () => {
               <div className="flex gap-1">
                 {[1,2,3,4,5].map(i => <Star key={i} className="w-4 h-4 text-red-500 fill-red-500" />)}
               </div>
-              <div className="text-sm font-bold">500+ Local Reviews</div>
+              <div className="text-sm font-bold">4.7 on Google</div>
             </div>
           </motion.div>
         </div>
@@ -254,8 +254,8 @@ const Features = () => {
   const features = [
     {
       icon: <Truck className="w-8 h-8 text-red-500" />,
-      title: "Same Day Delivery",
-      desc: "Order by 2 PM and sleep on your new mattress tonight. We stock what we sell."
+      title: "Same Day & Next Day Delivery",
+      desc: "Need it fast? We offer same day and next day delivery. We stock what we sell."
     },
     {
       icon: <Star className="w-8 h-8 text-red-500" />,
@@ -269,8 +269,8 @@ const Features = () => {
     },
     {
       icon: <Clock className="w-8 h-8 text-red-500" />,
-      title: "100-Night Trial",
-      desc: "Sleep soundly knowing you have 100 nights to ensure it's the perfect fit."
+      title: "90-Night Trial",
+      desc: "Sleep soundly knowing you have 90 nights to ensure it's the perfect fit."
     }
   ];
 
@@ -410,8 +410,8 @@ const FeaturedProducts = () => {
 const FAQ = () => {
   const faqs = [
     {
-      q: "Do you really deliver same day?",
-      a: "Yes! If you purchase an in-stock mattress before 2:00 PM, we guarantee delivery to Gulf Shores, Orange Beach, and Foley the very same day."
+      q: "Do you offer same day and next day delivery?",
+      a: "Yes! We offer same day and next day delivery to Gulf Shores, Orange Beach, and Foley. Give us a call to confirm availability and schedule your delivery."
     },
     {
       q: "Will you take away my old mattress?",
@@ -423,7 +423,7 @@ const FAQ = () => {
     },
     {
       q: "What is your return policy?",
-      a: "We offer a 100-Night Comfort Guarantee. If you're not sleeping better after 30 nights, we'll work with you to exchange it for a model that fits you better."
+      a: "We offer a 90-Night Comfort Guarantee. If you're not sleeping better after 30 nights, we'll work with you to exchange it for a model that fits you better."
     }
   ];
 
@@ -468,7 +468,7 @@ const Testimonials = () => {
             {[1,2,3,4,5].map(i => <Star key={i} className="w-6 h-6 text-red-400 fill-red-400" />)}
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Gulf Shores Loves Us</h2>
-          <p className="text-slate-600">Rated 5 Stars on Google Reviews</p>
+          <p className="text-slate-600">Rated 4.7 Stars on Google Reviews</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -518,8 +518,7 @@ const Brands = () => {
     "Tempur-Pedic",
     "Stearns & Foster",
     "Sealy",
-    "Malouf",
-    "Wellsville"
+    "Serenity Sleep"
   ];
 
   return (
@@ -633,7 +632,7 @@ const ContactSection = () => {
                 <div>
                   <h3 className="font-bold text-slate-900">Phone</h3>
                   <p className="text-slate-600">Call us for inventory checks</p>
-                  <a href="tel:251-968-6888" className="text-lg font-bold text-slate-900 hover:text-red-600 transition-colors">(251) 968-6888</a>
+                  <a href="tel:251-952-0036" className="text-lg font-bold text-slate-900 hover:text-red-600 transition-colors">(251) 952-0036</a>
                 </div>
               </div>
 
@@ -644,7 +643,7 @@ const ContactSection = () => {
                 <div>
                   <h3 className="font-bold text-slate-900">Hours</h3>
                   <p className="text-slate-600">Mon - Sat: 10:00 AM - 6:00 PM</p>
-                  <p className="text-slate-600">Sunday: Closed</p>
+                  <p className="text-slate-600">Sunday: 12:00 PM - 5:00 PM</p>
                 </div>
               </div>
             </div>
@@ -736,13 +735,13 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-red-500 flex-shrink-0" />
-                <a href="tel:251-968-6888" className="hover:text-red-400">(251) 968-6888</a>
+                <a href="tel:251-952-0036" className="hover:text-red-400">(251) 952-0036</a>
               </li>
               <li className="flex items-start gap-3">
                 <Clock className="w-5 h-5 text-red-500 flex-shrink-0" />
                 <div>
                   <p>Mon-Sat: 10am - 6pm</p>
-                  <p>Sun: Closed</p>
+                  <p>Sun: 12:00 PM - 5:00 PM</p>
                 </div>
               </li>
             </ul>

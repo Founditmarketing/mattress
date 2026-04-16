@@ -96,7 +96,7 @@ export const AdminDashboard = ({ onClose }: { onClose: () => void }) => {
                   <option>Tempur-Pedic</option>
                   <option>Sealy</option>
                   <option>Stearns & Foster</option>
-                  <option>Malouf</option>
+                  <option>Serenity Sleep</option>
                 </select>
               </div>
               <div>
